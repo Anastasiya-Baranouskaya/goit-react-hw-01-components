@@ -1,4 +1,6 @@
 .App {
   padding-right: 250px;
   padding-left: 250px;
+  display: grid;
+  justify-content: center;
 }
