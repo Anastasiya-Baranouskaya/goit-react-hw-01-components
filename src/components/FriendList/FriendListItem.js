@@ -1,15 +1,21 @@
 // import PropTypes from 'prop-types';
-import './FriendList.scss';
-export function FriendListItem({ id, status, avatar, name }) {
+import s from './FriendList.module.css';
+export function FriendListItem({ id, isOnline, avatar, name }) {
   return (
-    <li class="item" key={id}>
-      {status ? (
-        <span className="statusOnline"></span>
+    <li className={s.item} key={id}>
+      {isOnline ? (
+        <span className={s.statusOnline}></span>
       ) : (
-        <span className="statusOffline"></span>
-      )}{' '}
-      <img class="friend-avatar" src={avatar} alt={name} width="48" />
-      <p class="name">{name}</p>
+        <span className={s.statusOffline}></span>
+      )}
+      <img
+        className={s.avatar}
+        src={avatar}
+        alt={name}
+        width="48"
+        height="48"
+      />
+      <p className={s.name}>{name}</p>
     </li>
   );
 }
