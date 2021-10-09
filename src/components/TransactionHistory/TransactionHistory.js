@@ -1,9 +1,9 @@
 import { TransactionHistoryItems } from './TransactionHistoryItems';
-import './TransactionHistory.scss';
+import s from './TransactionHistory.module.css';
 export function TransactionHistory({ items, children }) {
   // console.log(items);
   return (
-    <table className="transaction-history">
+    <table className={s.transactionHistory}>
       <thead>
         <tr>
           <th>Type</th>
@@ -12,7 +12,7 @@ export function TransactionHistory({ items, children }) {
         </tr>
       </thead>
 
-      <tbody className="transaction-history__border ">
+      <tbody>
         {items.map(items => {
           return (
             <TransactionHistoryItems

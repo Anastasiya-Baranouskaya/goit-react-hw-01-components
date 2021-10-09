@@ -1,4 +1,4 @@
-import './TransactionHistory.scss';
+import s from './TransactionHistory.module.css';
 export function TransactionHistoryItems({ id, type, amount, currency }) {
   return (
     <tr id={id}>
