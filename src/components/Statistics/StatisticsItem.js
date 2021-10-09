@@ -1,8 +1,9 @@
+import s from './Statistics.module.css';
 export function StatisticsItems({ id, label, percentage }) {
   return (
-    <li class="item stat-list__item" key={id}>
-      <span class="label stat-list__label">{label}</span>
-      <span class="percentage">{percentage}%</span>
+    <li className={s.item} key={id}>
+      <span className={s.label}>{label}</span>
+      <span className={s.percentage}>{percentage}%</span>
     </li>
   );
 }
