@@ -1,7 +1,7 @@
 import { TransactionHistoryItems } from './TransactionHistoryItems';
 import s from './TransactionHistory.module.css';
 import PropTypes from 'prop-types';
-export function TransactionHistory({ items, children }) {
+export function TransactionHistory({ items }) {
   return (
     <table className={s.transactionHistory}>
       <thead>
@@ -23,7 +23,6 @@ export function TransactionHistory({ items, children }) {
             />
           );
         })}
-        {children}
       </tbody>
     </table>
   );

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-export function TransactionHistoryItems({ id, type, amount, currency }) {
+export function TransactionHistoryItems({ type, amount, currency }) {
   return (
-    <tr id={id}>
+    <tr>
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
