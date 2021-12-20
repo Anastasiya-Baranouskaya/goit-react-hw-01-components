@@ -1,7 +1,7 @@
 import { TransactionHistoryItems } from './TransactionHistoryItems';
 import s from './TransactionHistory.module.css';
+import PropTypes from 'prop-types';
 export function TransactionHistory({ items, children }) {
-  // console.log(items);
   return (
     <table className={s.transactionHistory}>
       <thead>
@@ -24,17 +24,14 @@ export function TransactionHistory({ items, children }) {
           );
         })}
         {children}
-        {/* <tr>
-          <td>{items.type}</td>
-          <td>{items.amount}</td>
-          <td>{items.currency}</td>
-        </tr>
-        <tr>
-          <td>{items.type}</td>
-          <td>{items.amount}</td>
-          <td>{items.currency}</td>
-        </tr> */}
       </tbody>
     </table>
   );
 }
+TransactionHistory.propTypes = {
+  item: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  ),
+};

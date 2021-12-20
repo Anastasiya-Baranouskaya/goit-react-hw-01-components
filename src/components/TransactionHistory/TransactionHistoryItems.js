@@ -1,4 +1,4 @@
-// import s from './TransactionHistory.module.css';
+import PropTypes from 'prop-types';
 export function TransactionHistoryItems({ id, type, amount, currency }) {
   return (
     <tr id={id}>
@@ -8,3 +8,8 @@ export function TransactionHistoryItems({ id, type, amount, currency }) {
     </tr>
   );
 }
+TransactionHistoryItems.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+};

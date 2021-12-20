@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import s from './FriendList.module.css';
 export function FriendListItem({ id, isOnline, avatar, name }) {
   return (
@@ -19,9 +19,9 @@ export function FriendListItem({ id, isOnline, avatar, name }) {
     </li>
   );
 }
-// FriendListItem.propTypes = {
-//   // key: PropTypes.number.isRequired,
-//   avatar: PropTypes.string.isRequired,
-//   name: PropTypes.string.isRequired,
-//   status: PropTypes.bool.isRequired,
-// };
+FriendListItem.propTypes = {
+  key: PropTypes.number.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  status: PropTypes.bool.isRequired,
+};
